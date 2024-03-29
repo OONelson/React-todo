@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+	/* BACKGROUND */
+	--background: #aca7a713;
+	--card-background: #fff;
+
+	/* HEADER */
+	--header-text: #1e1e1e;
+	--mini-header: #1e1e1ef8;
+
+	--button-fade: #d9d9d9;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	height: 100vh;
+	width: 100vw;
+	background-color: var(--background);
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+	font-style: normal;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.app {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	background-color: var(--card-background);
+	padding: 2rem;
+	border-radius: 0.5rem;
+	min-height: 50vh;
+	height: 100%;
+	width: 40vw;
+	box-shadow: 14px 14px 25px -17px rgba(0, 0, 0, 0.75);
+	position: relative;
+}
+.create {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -10%);
+	width: 20vw;
+	min-height: 25vh;
+	/* height: 100%; */
+	background-color: #fff;
+	padding: 0.5rem 2rem;
+	border-radius: 0.3rem;
+	box-shadow: 5px 5px 16px -4px rgba(0, 0, 0, 0.75);
+}
+.create .head {
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem 0;
+}
+.create input {
+	padding: 0.5rem 0.2rem;
+	margin-bottom: 3rem;
+}
+.create form {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.create header {
+	padding: 1rem 0;
+}
+
+.close {
+	color: var(--button-fade);
+	cursor: pointer;
+}
+.todos {
+	padding: 1rem 2rem;
+}
+.todo {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1rem;
+}
+.addTodo {
+	width: 100%;
+	color: var(--header-text);
+	font-size: 1rem;
+	font-weight: 500;
+	padding: 0.6rem 1rem;
+	border: 0;
+	border-radius: 0.3rem;
+	cursor: pointer;
+}
+.todo p {
+	font-weight: 600;
+}
+
+@media screen and (max-width: 430px) {
+	body {
+		height: 100%;
+	}
+	.app {
+		height: 100vh;
+		width: 100vw;
+	}
+	.create {
+		width: 70vw;
+		transform: translate(-50%, 40%);
+	}
+	.todos {
+		padding: 1rem;
+	}
+}
